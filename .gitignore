@@ -3,3 +3,15 @@
 .env.local
 node_modules/
 *.log
+__pycache__/
+.tmp-chroma-test/
+
+# Godot
+old/godot-demo/.godot/
+old/godot-demo/.import/
+old/godot-demo/assets/_downloads/
+old/pipeline/.env
+old/pipeline/3d/raw_3d/
+old/pipeline/3d/output_glb/
+old/pipeline/3d/cleaned/
+

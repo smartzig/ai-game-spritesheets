@@ -4,7 +4,7 @@ Prompt templates and reference images for generating consistent game character s
 
 | Idle | Walk | Attack |
 |:---:|:---:|:---:|
-| ![Idle](references/previews/idle-south.gif) | ![Walk](references/previews/walk-south.gif) | ![Attack](references/previews/attack-west.gif) |
+| ![Idle](old/pixel-tutorial/references/previews/idle-south.gif) | ![Walk](old/pixel-tutorial/references/previews/walk-south.gif) | ![Attack](old/pixel-tutorial/references/previews/attack-west.gif) |
 
 *All three animations generated with the pipeline below — same character, same scale, same foot baseline.*
 
@@ -16,10 +16,12 @@ Prompt templates and reference images for generating consistent game character s
 
 🐦 **Follow [@chongdashu](https://x.com/chongdashu) on X** for daily AI gamedev tips, prompts, and experiments.
 
-This repo contains everything you need to follow along:
+The active 2.5D pipeline is `prompts-2.5d/`, with Pinduca, Zigo, and Michi, the item cuts in `items/`, and the finished monsters in `pigeon/` and `cloud/`. The original pixel tutorial is archived in `old/pixel-tutorial/`. Earlier experiments stay in `old/` and are not part of this pipeline.
 
-- `prompts/` — the exact prompt templates, one per pipeline step
-- `references/` — the reference images you pass into each prompt (pixel grid, sheet guide, anchors, contact sheets, runtime strips)
+This repo contains everything you need to follow along with the original pixel tutorial, now archived:
+
+- `old/pixel-tutorial/prompts/` — the exact prompt templates, one per pipeline step
+- `old/pixel-tutorial/references/` — the reference images you pass into each prompt (pixel grid, sheet guide, anchors, contact sheets, runtime strips)
 
 ---
 
@@ -48,15 +50,15 @@ concept / box art direction
 
 | Stage | Output |
 |---|---|
-| Concept / box art | ![Box art](references/anchors/01-box-art.png) |
-| South anchor (prompt + grid) ✅ | ![South anchor](references/anchors/02-south-anchor.png) |
-| Direct box-art-to-sprite ❌ | ![Rejected](references/anchors/02b-south-from-boxart-rejected.png) |
-| Neutral south anchor (effects stripped) | ![Neutral](references/anchors/03-neutral-south.png) |
-| Directional anchors | ![Directional](references/anchors/04-directional-contact.png) |
-| Walk-cycle review (south) | ![Walk south](references/animations/05-walk-south-contact.png) |
-| Attack review (south) | ![Attack south](references/animations/08-attack-south-contact.png) |
-| Idle review (south) | ![Idle south](references/animations/11-idle-south-contact.png) |
-| Final runtime walk strip | ![Runtime walk](references/runtime/15-runtime-walk-s.png) |
+| Concept / box art | ![Box art](old/pixel-tutorial/references/anchors/01-box-art.png) |
+| South anchor (prompt + grid) ✅ | ![South anchor](old/pixel-tutorial/references/anchors/02-south-anchor.png) |
+| Direct box-art-to-sprite ❌ | ![Rejected](old/pixel-tutorial/references/anchors/02b-south-from-boxart-rejected.png) |
+| Neutral south anchor (effects stripped) | ![Neutral](old/pixel-tutorial/references/anchors/03-neutral-south.png) |
+| Directional anchors | ![Directional](old/pixel-tutorial/references/anchors/04-directional-contact.png) |
+| Walk-cycle review (south) | ![Walk south](old/pixel-tutorial/references/animations/05-walk-south-contact.png) |
+| Attack review (south) | ![Attack south](old/pixel-tutorial/references/animations/08-attack-south-contact.png) |
+| Idle review (south) | ![Idle south](old/pixel-tutorial/references/animations/11-idle-south-contact.png) |
+| Final runtime walk strip | ![Runtime walk](old/pixel-tutorial/references/runtime/15-runtime-walk-s.png) |
 
 ---
 
@@ -64,14 +66,14 @@ concept / box art direction
 
 Step-by-step templates with `{PLACEHOLDERS}` you fill in for your own character:
 
-1. [01 — Box Art](prompts/01-box-art.md) — generate the high-res concept portrait
-2. [02 — South Anchor](prompts/02-south-anchor.md) — the most important image you'll generate
-3. [03 — Neutral Anchor Reset](prompts/03-neutral-anchor.md) — strip baked-in magic / weapons
-4. [04 — Directional Anchors](prompts/04-directional-anchors.md) — west / north (east = flip)
-5. [05 — Walk Cycle (image-to-video)](prompts/05-walk-cycle-i2v.md) — the only thing that actually works
-6. [06 — Attack Spritesheet](prompts/06-attack-spritesheet.md) — 10-frame 5x2 sheet
-7. [07 — Idle Spritesheet](prompts/07-idle-spritesheet.md) — subtle 10-frame loop
-8. [08 — Normalization](prompts/08-normalization.md) — the part nobody shows you
+1. [01 — Box Art](old/pixel-tutorial/prompts/01-box-art.md) — generate the high-res concept portrait
+2. [02 — South Anchor](old/pixel-tutorial/prompts/02-south-anchor.md) — the most important image you'll generate
+3. [03 — Neutral Anchor Reset](old/pixel-tutorial/prompts/03-neutral-anchor.md) — strip baked-in magic / weapons
+4. [04 — Directional Anchors](old/pixel-tutorial/prompts/04-directional-anchors.md) — west / north (east = flip)
+5. [05 — Walk Cycle (image-to-video)](old/pixel-tutorial/prompts/05-walk-cycle-i2v.md) — the only thing that actually works
+6. [06 — Attack Spritesheet](old/pixel-tutorial/prompts/06-attack-spritesheet.md) — 10-frame 5x2 sheet
+7. [07 — Idle Spritesheet](old/pixel-tutorial/prompts/07-idle-spritesheet.md) — subtle 10-frame loop
+8. [08 — Normalization](old/pixel-tutorial/prompts/08-normalization.md) — the part nobody shows you
 
 ---
 
